@@ -1,0 +1,25 @@
+const prompt = require('prompt-sync')();
+
+function revStr(input) {
+    return input.split('').reverse().join('');
+}
+
+function isPalin(input) {
+    let original = input.toLowerCase();
+    console.log("Original String is : "+original);
+
+    let reversed = revStr(original).toLowerCase();
+    console.log("Reversed String is : "+reversed);
+    
+    if (original===reversed) {
+        console.log("String Is Palindrome");
+    } else {
+        console.log("String Is Not Palindrome");
+    }
+
+}
+
+let str = prompt("Enter A String : ")
+
+isPalin(str);
+

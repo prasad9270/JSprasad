@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page</title>
+<style>
+body {
+background-color: white;
+}
+button {
+background-color: blue; color: white;
+padding: 10px; border: none;
+cursor: pointer;
+}
+button:hover, button:focus { background-color: red;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to my website!</h1>
+<p>Here you will find all sorts of interesting things.</p>
+<button>Change background color</button>
+<script>
+const button = document.querySelector('button'); button.addEventListener('mouseover', () => {
+ 
+document.body.style.backgroundColor = 'green';
+
+});
+button.addEventListener('focus', () => {
+document.body.style.backgroundColor = 'yellow';
+});
+</script>
+</body>
+</html>

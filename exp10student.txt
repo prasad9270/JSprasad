@@ -1,0 +1,83 @@
+exp10student
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Information Form</title>
+<script>
+function validateForm() {
+// Get form values
+var name = document.forms["infoForm"]["name"].value;
+var address = document.forms["infoForm"]["address"].value; var city = document.forms["infoForm"]["city"].value;
+var state = document.forms["infoForm"]["state"].value;
+var gender = document.forms["infoForm"]["gender"].value; var mobile = document.forms["infoForm"]["mobile"].value; var email = document.forms["infoForm"]["email"].value;
+
+// Validate name
+var nameRegex = /^[a-zA-Z\s]+$/; if (!nameRegex.test(name)) {
+alert("Please enter a valid name."); return false;
+}
+
+
+// Validate mobile number
+var mobileRegex = /^[0-9]{10}$/; if (!mobileRegex.test(mobile)) {
+alert("Please enter a valid 10-digit mobile number."); return false;
+}
+ 
+
+// Validate email
+var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!emailRegex.test(email)) {
+alert("Please enter a valid email address."); return false;
+}
+
+
+// Check if any field is empty
+if (name == "" || address == "" || city == "" || state == "" || gender == "" || mobile == "" || email
+== "") {
+alert("Please fill in all fields."); return false;
+}
+
+
+// Display success message
+alert("Congratulations! Your information has been submitted successfully."); return true;
+}
+</script>
+</head>
+<body>
+<h1>Student Information Form</h1>
+<form name="infoForm" onsubmit="return validateForm()">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name"><br><br>
+
+
+<label for="address">Address:</label>
+<input type="text" id="address" name="address"><br><br>
+ 
+
+<label for="city">City:</label>
+<input type="text" id="city" name="city"><br><br>
+
+
+<label for="state">State:</label>
+<input type="text" id="state" name="state"><br><br>
+
+
+<label for="gender">Gender:</label>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br><br>
+
+
+<label for="mobile">Mobile Number:</label>
+<input type="text" id="mobile" name="mobile"><br><br>
+
+
+<label for="email">Email ID:</label>
+<input type="text" id="email" name="email"><br><br>
+
+
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+ 

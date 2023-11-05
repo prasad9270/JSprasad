@@ -1,0 +1,13 @@
+function replaceChars(input, search, replace) {
+    return input.split(search).join(replace);
+}
+
+const str = "Programming is fun!";
+const searchChar = 'm';
+const replaceChar = 'X';
+
+const replacedStr = replaceChars(str, searchChar, replaceChar);
+
+console.log("Original String:", str);
+console.log("Replaced String:", replacedStr);
+

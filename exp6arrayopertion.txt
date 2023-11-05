@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Operations</title>
+<script>
+// Create an array
+let arr = [1, 2, 3, 4, 5];
+
+
+// Remove specific element from the array function removeElement() {
+let element = parseInt(document.getElementById("removeElement").value); let index = arr.indexOf(element);
+if (index > -1) {
+arr.splice(index, 1);
+document.getElementById("result1").innerHTML = "Element " + element + " removed from the array. New array: " + arr;
+} else {
+document.getElementById("result1").innerHTML = "Element " + element + " not found in the
+array.";
+}
+}
+
+
+// Check if an array contains a specified value function checkValue() {
+let value = parseInt(document.getElementById("checkValue").value); if (arr.includes(value)) {
+document.getElementById("result2").innerHTML = "Array contains the value " + value;
+} else {
+ 
+document.getElementById("result2").innerHTML = "Array does not contain the value " + value;
+}
+}
+
+
+// Empty an array function emptyArray() {
+arr = [];
+document.getElementById("result3").innerHTML = "Array emptied. New array: " + arr;
+}
+</script>
+</head>
+<body>
+<h1>Array Operations</h1>
+<p>Array: [1, 2, 3, 4, 5]</p>
+<h2>Remove Specific Element from Array</h2>
+<label for="removeElement">Enter element to remove:</label>
+<input type="number" id="removeElement">
+<button onclick="removeElement()">Remove</button>
+<p id="result1"></p>
+<h2>Check if Array Contains Specified Value</h2>
+<label for="checkValue">Enter value to check:</label>
+<input type="number" id="checkValue">
+<button onclick="checkValue()">Check</button>
+<p id="result2"></p>
+<h2>Empty Array</h2>
+<button onclick="emptyArray()">Empty</button>
+<p id="result3"></p>
+</body>
+</html>

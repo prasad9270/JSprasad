@@ -1,0 +1,27 @@
+
+const prompt=require('prompt-sync') ();
+function calculateTriangleArea(base, height) {
+    return 0.5 * base * height;
+  }
+  
+  function calculateRectangleArea(length, width) {
+    return length * width;
+  }
+  
+  function calculateCircleArea(radius) {
+    return Math.PI * radius * radius;
+  }
+  
+  const triangleBase = parseFloat(prompt("Enter the base of the triangle: "));
+  const triangleHeight = parseFloat(prompt("Enter the height of the triangle: "));
+  const triangleArea = calculateTriangleArea(triangleBase, triangleHeight);
+  console.log("Area of the triangle: "+triangleArea);
+  
+  const rectangleLength = parseFloat(prompt("Enter the length of the rectangle: "));
+  const rectangleWidth = parseFloat(prompt("Enter the width of the rectangle: "));
+  const rectangleArea = calculateRectangleArea(rectangleLength, rectangleWidth);
+  console.log("Area of the Rectangle: "+rectangleArea);
+  
+  const circleRadius = parseFloat(prompt("Enter the radius of the circle: "));
+  const circleArea = calculateCircleArea(circleRadius);
+  console.log("Area of the Circle: "+circleArea);
